@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="correo_electr_nico">Correo electrónico</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="email">Email</string>
+    <string name="iniciar_sesi_n">Iniciar sesión</string>
+    <string name="inicia_sesi_n">Inicia sesión</string>
+</resources>
