@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    tools:context=".segundavista">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="60sp"
+        android:text="@string/controla_tus_luces"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062" />
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/interruptor"
+        android:layout_width="207dp"
+        android:layout_height="87dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/luz_de_casa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.364" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/interruptor2"
+        android:layout_width="207dp"
+        android:layout_height="87dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/luces_de_la_sala"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.641" />
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+        android:id="@+id/frameLayout"
+        />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/bottom_nav"
+        app:menu="@menu/bottom_menu"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

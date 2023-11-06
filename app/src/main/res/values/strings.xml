@@ -2,7 +2,23 @@
     <string name="app_name">My Application</string>
     <string name="correo_electr_nico">Correo electrónico</string>
     <string name="contrase_a">Contraseña</string>
-    <string name="email">Email</string>
+    =
     <string name="iniciar_sesi_n">Iniciar sesión</string>
     <string name="inicia_sesi_n">Inicia sesión</string>
+    <string name="olvidaste_tu_contrase_a">¿Olvidaste tu contraseña?</string>
+    <string name="crea_tu_cuenta">¡Crea tu cuenta!</string>
+    <string name="controla_tus_luces">Controla tus luces</string>
+    <string name="luz_de_casa">Luz de casa</string>
+    <string name="luces_de_la_sala">Luces de la sala</string>
+    <string name="xxxxxxxxxxxx">xxxxxxxxxxxx</string>
+    <string name="Usuario">Usuario\n</string>
+    <string name="sitio_web">Sitio web</string>
+    <string name="informaci_n">Información</string>
+    <string name="cambiar_contrase_a">Cambiar contraseña</string>
+    <string name="configura_tus_luces">Configura tus luces</string>
+    <string name="agregar_luz">Agregar Luz</string>
+    <string name="quitar_luz">Quitar luz</string>
+    <string name="configuraci_n">Configuración</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="cerrar_sesi_n">Cerrar Sesión</string>
 </resources>
