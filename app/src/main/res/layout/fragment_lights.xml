@@ -12,7 +12,7 @@
         android:layout_height="314dp"
         android:layout_marginStart="50sp"
         android:src="@drawable/ic_luz" />
-        />
+    />
 
 
     <TextView

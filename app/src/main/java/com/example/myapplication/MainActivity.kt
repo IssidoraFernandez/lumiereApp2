@@ -9,15 +9,73 @@ import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.vistas.AccountsFragment
+import com.example.myapplication.vistas.HomeFragment
+import com.example.myapplication.vistas.LightsFragment
+import com.example.myapplication.vistas.SettingsFragment
 
-class MainActivity() : AppCompatActivity(), Parcelable {
+//configurar viewBinding
+    class MainActivity() : AppCompatActivity() {
+
     private lateinit var binding:ActivityMainBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater) // configurar viewBinding
+        setContentView(binding.root)
 
-    constructor(parcel: Parcel) : this() {
+        //cargar fragmento cuando inicie la aplicación
+        if (savedInstanceState == null){
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.frameLayout, HomeFragment()).commit()
+        }
 
-    }
 
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
+
+        binding.bottomNav.setOnItemSelectedListener {
+            when (it.itemId){
+
+                R.id.nav_home -> {
+                    //mostar fragmento home
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frameLayout, HomeFragment()).commit()
+                    true
+                }
+                R.id.nav_luces -> {
+                    //mostar fragmento luces
+                    supportFragmentManager.beginTransaction()
+                            .replace(R.id.frameLayout, LightsFragment()).commit()
+                    true
+                }
+                R.id.nav_accounts -> {
+                    //mostar fragmento accounts
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frameLayout, AccountsFragment()).commit()
+                    true
+                }
+                R.id.nav_settings -> {
+                    //mostar fragmento settings
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frameLayout, SettingsFragment()).commit()
+                    true
+                }
+
+
+
+
+
+
+                else -> false
+                }
+            }
+
+        binding.bottomNav.setOnItemReselectedListener {
+            when (it.ItemId) {
+                R.id.nav_home -> Toast.makeText(this, "Bienvienido al inicio", Toast.LENGTH_SHORT).show()
+                R.id.nav_luces -> Toast.makeText(this,"Aquí puedes ver tus luces", Toast.LENGTH_SHORT).show()
+                R.id.nav_accounts -> Toast.makeText(this,"Aquí puedes ver tu cuenta", Toast.LENGTH_SHORT).show()
+                R.id.nav_settings -> Toast.makeText(this,"Aquí puedes configurar la app", Toast.LENGTH_SHORT).show()
+            }
+        }
 
     }
 
